@@ -1,0 +1,41 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!--昌平健康云配色-->
+    <style name="CPJKY">
+        <item name="titleColor">@color/title_color_cpjky</item>
+        <item name="titleTextColor">@color/title_color_white</item>
+        <item name="rip_bg">@mipmap/rip_bg_green</item>
+        <item name="inputColor">@color/input_color_black_</item>
+        <item name="input_bg">@color/input_bg_aqua</item>
+        <item name="item_chat_l_light_bg">@mipmap/item_chat_l_light_aqua_bg</item>
+        <item name="chat_bottom_voice">@mipmap/speek_cpjky</item>
+        <item name="chat_bottom_send">@mipmap/send_cpjky</item>
+        <item name="uninputColor">@color/uninput_color_cpjky</item>
+        <item name="diandiandian">@drawable/diandiandian_aqua</item>
+        <item name="input_line_bg">@color/title_color_cpjky</item>
+        <item name="chat_speech_select">@mipmap/speek_yuan_cpjky</item>
+        <item name="chat_speech_unselect">@mipmap/speek_yuan_cpjky</item>
+        <item name="item_chat_r_bg">@mipmap/item_chat_r_green_bg</item>
+        <item name="btn_bg">@drawable/btn_bg_aqua</item>
+        <item name="btn_down">@mipmap/btn_down_green</item>
+        <item name="btn_middle">@mipmap/btn_middle_green</item>
+        <item name="item_chat_l_dark_bg">@mipmap/item_chat_l_light_green_bg</item>
+        <item name="check_box_duomei">@drawable/check_box_duomei_aqua</item>
+        <item name="set_btn_bg_message">@drawable/set_btn_aqua_bg</item>
+        <item name="check_box_fuck">@drawable/check_box_fuck_aqua</item>
+        <item name="check_box_more">@drawable/check_box_more_aqua</item>
+        <item name="check_box_more_text">@drawable/check_box_more_text_aqua</item>
+        <item name="language">@drawable/language_aqua</item>
+        <item name="doctor_card">@drawable/doctor_card_aqua</item>
+        <item name="doctor_card_bg">@drawable/doctor_card_bg_aqua</item>
+        <item name="doctor_cardp_bg">@drawable/doctor_cardp_bg_cpjky</item>
+    </style>
+
+</resources>

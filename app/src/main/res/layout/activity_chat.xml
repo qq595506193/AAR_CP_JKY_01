@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".chat_view.ChatActivity">
+
+
+    <include
+        android:id="@+id/include_title"
+        layout="@layout/layout_base_title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/lv_chat"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_0"
+        app:layout_constraintBottom_toTopOf="@id/include_bottom"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/include_title" />
+
+    <LinearLayout
+        android:id="@+id/ll_more"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:background="?titleTextColor"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/rv_menu"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lv_chat" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_menu"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_5"
+        android:layout_marginBottom="@dimen/dp_5"
+        android:background="?titleTextColor"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/include_bottom"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_more" />
+
+    <include
+        android:id="@+id/include_bottom"
+        layout="@layout/layout_bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lv_chat" />
+
+    <LinearLayout
+        android:id="@+id/ll_btn"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_0"
+        android:visibility="gone"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@id/include_bottom"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/include_bottom">
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?titleTextColor"
+            android:gravity="center"
+            android:text="@string/tv_cancel"
+            android:textColor="?inputColor"
+            android:textSize="@dimen/sp_16" />
+
+        <TextView
+            android:id="@+id/tv_sure"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?titleColor"
+            android:gravity="center"
+            android:text="@string/tv_sure"
+            android:textColor="?titleTextColor"
+            android:textSize="@dimen/sp_16" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <declare-styleable name="IndicatorView">
+        <attr name="indicatorColor" format="color" />
+        <attr name="indicatorColorSelected" format="color" />
+        <attr name="indicatorWidth" format="integer" />
+        <attr name="gravity" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+    </declare-styleable>
+    <declare-styleable name="PullToRefresh">
+        <attr name="adapterViewBackground" format="reference|color" />
+        <attr name="headerBackground" format="reference|color" />
+        <attr name="headerTextColor" format="color" />
+        <attr name="mode">
+            <flag name="pullDownFromTop" value="0x1" />
+            <flag name="pullUpFromBottom" value="0x2" />
+            <flag name="both" value="0x3" />
+        </attr>
+        <attr name="headerType">
+            <flag name="input" value="0x1" />
+            <flag name="progressBar" value="0x2" />
+            <flag name="normal" value="0x3" />
+            <flag name="more" value="0x4" />
+            <flag name="different" value="0x5" />
+        </attr>
+
+        <!-- A drawable to use as the background of the Refreshable View -->
+        <attr name="ptrRefreshableViewBackground" format="reference|color" />
+
+        <!-- A drawable to use as the background of the Header and Footer Loading Views -->
+        <attr name="ptrHeaderBackground" format="reference|color" />
+
+        <!-- Text Color of the Header and Footer Loading Views -->
+        <attr name="ptrHeaderTextColor" format="reference|color" />
+
+        <!-- Text Color of the Header and Footer Loading Views Sub Header -->
+        <attr name="ptrHeaderSubTextColor" format="reference|color" />
+
+        <!-- Mode of Pull-to-Refresh that should be used -->
+        <attr name="ptrMode">
+            <flag name="disabled" value="0x0" />
+            <flag name="pullFromStart" value="0x1" />
+            <flag name="pullFromEnd" value="0x2" />
+            <flag name="both" value="0x3" />
+            <flag name="manualOnly" value="0x4" />
+
+            <!-- These last two are depreacted -->
+            <flag name="pullDownFromTop" value="0x1" />
+            <flag name="pullUpFromBottom" value="0x2" />
+        </attr>
+
+        <!-- Whether the Indicator overlay(s) should be used -->
+        <attr name="ptrShowIndicator" format="reference|boolean" />
+
+        <!-- Drawable to use as Loading Indicator. Changes both Header and Footer. -->
+        <attr name="ptrDrawable" format="reference" />
+
+        <!-- Drawable to use as Loading Indicator in the Header View. Overrides value set in ptrDrawable. -->
+        <attr name="ptrDrawableStart" format="reference" />
+
+        <!-- Drawable to use as Loading Indicator in the Footer View. Overrides value set in ptrDrawable. -->
+        <attr name="ptrDrawableEnd" format="reference" />
+
+        <!-- Whether Android's built-in Over Scroll should be utilised for Pull-to-Refresh. -->
+        <attr name="ptrOverScroll" format="reference|boolean" />
+
+        <!-- Base text color, typeface, size, and style for Header and Footer Loading Views -->
+        <attr name="ptrHeaderTextAppearance" format="reference" />
+
+        <!-- Base text color, typeface, size, and style for Header and Footer Loading Views Sub Header -->
+        <attr name="ptrSubHeaderTextAppearance" format="reference" />
+
+        <!-- Style of Animation should be used displayed when pulling. -->
+        <attr name="ptrAnimationStyle">
+            <flag name="rotate" value="0x0" />
+            <flag name="flip" value="0x1" />
+        </attr>
+
+        <!-- Whether the user can scroll while the View is Refreshing -->
+        <attr name="ptrScrollingWhileRefreshingEnabled" format="reference|boolean" />
+
+        <!--
+        	Whether PullToRefreshListView has it's extras enabled. This allows the user to be
+        	able to scroll while refreshing, and behaves better. It acheives this by adding
+        	Header and/or Footer Views to the ListView.
+        -->
+        <attr name="ptrListViewExtrasEnabled" format="reference|boolean" />
+
+        <!--
+        	Whether the Drawable should be continually rotated as you pull. This only
+        	takes effect when using the 'Rotate' Animation Style.
+        -->
+        <attr name="ptrRotateDrawableWhilePulling" format="reference|boolean" />
+
+        <!-- BELOW HERE ARE DEPRECEATED. DO NOT USE. -->
+        <attr name="ptrAdapterViewBackground" format="reference|color" />
+        <attr name="ptrDrawableTop" format="reference" />
+        <attr name="ptrDrawableBottom" format="reference" />
+
+    </declare-styleable>
+
+
+    <declare-styleable name="RippleLayout">
+        <attr name="color_s" format="color" />
+        <attr name="strokeWidth_s" format="dimension" />
+        <attr name="radius_s" format="dimension" />
+        <attr name="duration_s" format="integer" />
+        <attr name="rippleNums_s" format="integer" />
+        <attr name="scale_s" format="float" />
+    </declare-styleable>
+    <declare-styleable name="mytheme">
+        <attr name="rip_bg" format="reference" />
+        <attr name="titleColor" format="color" />
+        <attr name="inputColor" format="color" />
+        <attr name="titleTextColor" format="color" />
+        <attr name="input_bg" format="color" />
+        <attr name="input_bg_white" format="color" />
+        <attr name="chat_bottom_voice" format="reference" />
+        <attr name="chat_bottom_send" format="reference" />
+        <attr name="uninputColor" format="color" />
+        <attr name="input_line_bg" format="color" />
+        <attr name="chat_speech_select" format="reference" />
+        <attr name="chat_speech_unselect" format="reference" />
+        <attr name="rip_icon_center" format="reference" />
+        <attr name="diandiandian" format="reference" />
+        <attr name="item_chat_l_light_bg" format="reference" />
+        <attr name="item_chat_r_bg" format="reference" />
+        <attr name="btn_bg" format="reference" />
+        <attr name="btn_down" format="reference" />
+        <attr name="btn_middle" format="reference" />
+        <attr name="item_chat_l_dark_bg" format="reference" />
+        <attr name="check_box_duomei" format="reference" />
+        <attr name="set_btn_bg_message" format="reference" />
+        <attr name="check_box_fuck" format="reference" />
+        <attr name="check_box_more" format="reference" />
+        <attr name="check_box_more_text" format="reference" />
+        <attr name="language" format="reference" />
+        <attr name="doctor_card" format="reference" />
+        <attr name="doctor_card_bg" format="reference" />
+        <attr name="doctor_cardp_bg" format="reference" />
+    </declare-styleable>
+
+
+    <declare-styleable name="ViewPagerIndicator">
+        <!-- Style of the circle indicator. -->
+        <attr name="vpiCirclePageIndicatorStyle" format="reference" />
+        <!-- Style of the icon indicator's views. -->
+        <attr name="vpiIconPageIndicatorStyle" format="reference" />
+        <!-- Style of the line indicator. -->
+        <attr name="vpiLinePageIndicatorStyle" format="reference" />
+        <!-- Style of the title indicator. -->
+        <attr name="vpiTitlePageIndicatorStyle" format="reference" />
+        <!-- Style of the tab indicator's tabs. -->
+        <attr name="vpiTabPageIndicatorStyle" format="reference" />
+        <!-- Style of the underline indicator. -->
+        <attr name="vpiUnderlinePageIndicatorStyle" format="reference" />
+    </declare-styleable>
+
+    <attr name="centered" format="boolean" />
+    <attr name="selectedColor" format="color" />
+    <attr name="strokeWidth" format="dimension" />
+    <attr name="unselectedColor" format="color" />
+
+    <declare-styleable name="CirclePageIndicator">
+        <!-- Whether or not the indicators should be centered. -->
+        <attr name="centered" />
+        <!-- Color of the filled circle that represents the current page. -->
+        <attr name="fillColor" format="color" />
+        <!-- Color of the filled circles that represents pages. -->
+        <attr name="pageColor" format="color" />
+        <!-- Orientation of the indicator. -->
+        <attr name="android:orientation" />
+        <!-- Radius of the circles. This is also the spacing between circles. -->
+        <attr name="radius" format="dimension" />
+        <!-- Whether or not the selected indicator snaps to the circles. -->
+        <attr name="snap" format="boolean" />
+        <!-- Color of the open circles. -->
+        <attr name="strokeColor" format="color" />
+        <!-- Width of the stroke used to draw the circles. -->
+        <attr name="strokeWidth" />
+        <!-- View background -->
+        <attr name="android:background" />
+    </declare-styleable>
+
+    <declare-styleable name="LinePageIndicator">
+        <!-- Whether or not the indicators should be centered. -->
+        <attr name="centered" />
+        <!-- Color of the unselected lines that represent the pages. -->
+        <attr name="unselectedColor" />
+        <!-- Color of the selected line that represents the current page. -->
+        <attr name="selectedColor" />
+        <!-- Width of each indicator line. -->
+        <attr name="lineWidth" format="dimension" />
+        <!-- Width of each indicator line's stroke. -->
+        <attr name="strokeWidth" />
+        <!-- Width of the gap between each indicator line. -->
+        <attr name="gapWidth" format="dimension" />
+        <!-- View background -->
+        <attr name="android:background" />
+    </declare-styleable>
+
+    <declare-styleable name="TitlePageIndicator">
+        <!-- Screen edge padding. -->
+        <attr name="clipPadding" format="dimension" />
+        <!-- Color of the footer line and indicator. -->
+        <attr name="footerColor" format="color" />
+        <!-- Height of the footer line. -->
+        <attr name="footerLineHeight" format="dimension" />
+        <!-- Style of the indicator. Default is triangle. -->
+        <attr name="footerIndicatorStyle">
+            <enum name="none" value="0" />
+            <enum name="triangle" value="1" />
+            <enum name="underline" value="2" />
+        </attr>
+        <!-- Height of the indicator above the footer line. -->
+        <attr name="footerIndicatorHeight" format="dimension" />
+        <!-- Left and right padding of the underline indicator. -->
+        <attr name="footerIndicatorUnderlinePadding" format="dimension" />
+        <!-- Padding between the bottom of the title and the footer. -->
+        <attr name="footerPadding" format="dimension" />
+        <!-- Position of the line. -->
+        <attr name="linePosition">
+            <enum name="bottom" value="0" />
+            <enum name="top" value="1" />
+        </attr>
+        <!-- Color of the selected title. -->
+        <attr name="selectedColor" />
+        <!-- Whether or not the selected item is displayed as bold. -->
+        <attr name="selectedBold" format="boolean" />
+        <!-- Color of regular titles. -->
+        <attr name="android:textColor" />
+        <!-- Size of title text. -->
+        <attr name="android:textSize" />
+        <!-- Padding between titles when bumping into each other. -->
+        <attr name="titlePadding" format="dimension" />
+        <!-- Padding between titles and the top of the View. -->
+        <attr name="topPadding" format="dimension" />
+        <!-- View background -->
+        <attr name="android:background" />
+    </declare-styleable>
+
+    <declare-styleable name="UnderlinePageIndicator">
+        <!-- Whether or not the selected indicator fades. -->
+        <attr name="fades" format="boolean" />
+        <!-- Length of the delay to fade the indicator. -->
+        <attr name="fadeDelay" format="integer" />
+        <!-- Length of the indicator fade to transparent. -->
+        <attr name="fadeLength" format="integer" />
+        <!-- Color of the selected line that represents the current page. -->
+        <attr name="selectedColor" />
+        <!-- View background -->
+        <attr name="android:background" />
+    </declare-styleable>
+
+    <declare-styleable name="PagerSlidingTabStrip">
+        <attr name="pstsIndicatorColor" format="color" />
+        <attr name="pstsUnderlineColor" format="color" />
+        <attr name="pstsDividerColor" format="color" />
+        <attr name="pstsIndicatorHeight" format="dimension" />
+        <attr name="pstsUnderlineHeight" format="dimension" />
+        <attr name="pstsDividerPadding" format="dimension" />
+        <attr name="pstsTabPaddingLeftRight" format="dimension" />
+        <attr name="pstsScrollOffset" format="dimension" />
+        <attr name="pstsTabBackground" format="reference" />
+        <attr name="pstsShouldExpand" format="boolean" />
+        <attr name="pstsTextAllCaps" format="boolean" />
+    </declare-styleable>
+
+    <string-array name="smailey_txt">
+        <item>angry</item>
+        <item>anguished</item>
+        <item>astonished</item>
+        <item>blush</item>
+        <item>bowtie</item>
+        <item>cold_sweat</item>
+        <item>confounded</item>
+        <item>confused</item>
+        <item>cry</item>
+        <item>disappointed_relieved</item>
+        <item>disappointed</item>
+        <item>dizzy_face</item>
+        <item>expressionless</item>
+        <item>fearful</item>
+        <item>flushed</item>
+        <item>frowning</item>
+        <item>grimacing</item>
+        <item>grin</item>
+        <item>grinning</item>
+        <item>heart_eyes</item>
+        <item>hushed</item>
+        <item>imp</item>
+        <item>innocent</item>
+        <item>joy</item>
+        <item>kissing_closed_eyes</item>
+        <item>kissing_heart</item>
+        <item>kissing_smiling_eyes</item>
+        <item>kissing</item>
+        <item>mask</item>
+        <item>neutral_face</item>
+        <item>no_mouth</item>
+        <item>open_mouth</item>
+        <item>pensive</item>
+        <item>persevere</item>
+        <item>rage</item>
+        <item>relaxed</item>
+        <item>relieved</item>
+        <item>scream</item>
+        <item>sleeping</item>
+        <item>sleepy</item>
+    </string-array>
+
+    <!--    <integer-array name="smiley_drawable_ids">-->
+    <!--        <item>@mipmap/angry</item>-->
+    <!--        <item>@mipmap/anguished</item>-->
+    <!--        <item>@mipmap/astonished</item>-->
+    <!--        <item>@mipmap/blush</item>-->
+    <!--        <item>@mipmap/bowtie</item>-->
+    <!--        <item>@mipmap/cold_sweat</item>-->
+    <!--        <item>@mipmap/confounded</item>-->
+    <!--        <item>@mipmap/confused</item>-->
+    <!--        <item>@mipmap/cry</item>-->
+    <!--        <item>@mipmap/disappointed_relieved</item>-->
+    <!--        <item>@mipmap/disappointed</item>-->
+    <!--        <item>@mipmap/dizzy_face</item>-->
+    <!--        <item>@mipmap/expressionless</item>-->
+    <!--        <item>@mipmap/fearful</item>-->
+    <!--        <item>@mipmap/flushed</item>-->
+    <!--        <item>@mipmap/frowning</item>-->
+    <!--        <item>@mipmap/grimacing</item>-->
+    <!--        <item>@mipmap/grin</item>-->
+    <!--        <item>@mipmap/grinning</item>-->
+    <!--        <item>@mipmap/heart_eyes</item>-->
+    <!--        <item>@mipmap/hushed</item>-->
+    <!--        <item>@mipmap/imp</item>-->
+    <!--        <item>@mipmap/innocent</item>-->
+    <!--        <item>@mipmap/joy</item>-->
+    <!--        <item>@mipmap/kissing_closed_eyes</item>-->
+    <!--        <item>@mipmap/kissing_heart</item>-->
+    <!--        <item>@mipmap/kissing_smiling_eyes</item>-->
+    <!--        <item>@mipmap/kissing</item>-->
+    <!--        <item>@mipmap/mask</item>-->
+    <!--        <item>@mipmap/neutral_face</item>-->
+    <!--        <item>@mipmap/no_mouth</item>-->
+    <!--        <item>@mipmap/open_mouth</item>-->
+    <!--        <item>@mipmap/pensive</item>-->
+    <!--        <item>@mipmap/persevere</item>-->
+    <!--        <item>@mipmap/rage</item>-->
+    <!--        <item>@mipmap/relaxed</item>-->
+    <!--        <item>@mipmap/relieved</item>-->
+    <!--        <item>@mipmap/scream</item>-->
+    <!--        <item>@mipmap/sleeping</item>-->
+    <!--        <item>@mipmap/sleepy</item>-->
+    <!--    </integer-array>-->
+
+    <string-array name="client_type_txt">
+        <item>草绿色</item>
+        <item>橙色</item>
+        <item>赤红色</item>
+        <item>靛紫色</item>
+        <item>粉红色</item>
+        <item>黑色</item>
+        <item>湖蓝色</item>
+        <item>蓝灰色</item>
+        <item>玫瑰红</item>
+        <item>明黄色</item>
+        <item>浅粉色</item>
+        <item>浅红色</item>
+        <item>浅绿色</item>
+        <item>青灰色</item>
+        <item>群青色</item>
+        <item>深蓝色</item>
+        <item>深紫色</item>
+        <item>石绿色</item>
+        <item>胭脂粉</item>
+        <item>荧光绿</item>
+        <item>釉青色</item>
+        <item>中黄色</item>
+        <item>中绿色</item>
+        <item>祖母绿</item>
+        <item>自定义</item>
+    </string-array>
+
+    <!--    <integer-array name="client_type_drawable_ids">-->
+    <!--        <item>@mipmap/icon_color1</item>-->
+    <!--        <item>@mipmap/icon_color2</item>-->
+    <!--        <item>@mipmap/icon_color3</item>-->
+    <!--        <item>@mipmap/icon_color4</item>-->
+    <!--        <item>@mipmap/icon_color5</item>-->
+    <!--        <item>@mipmap/icon_color6</item>-->
+    <!--        <item>@mipmap/icon_color7</item>-->
+    <!--        <item>@mipmap/icon_color8</item>-->
+    <!--        <item>@mipmap/icon_color9</item>-->
+    <!--        <item>@mipmap/icon_color10</item>-->
+    <!--        <item>@mipmap/icon_color11</item>-->
+    <!--        <item>@mipmap/icon_color12</item>-->
+    <!--        <item>@mipmap/icon_color13</item>-->
+    <!--        <item>@mipmap/icon_color14</item>-->
+    <!--        <item>@mipmap/icon_color15</item>-->
+    <!--        <item>@mipmap/icon_color16</item>-->
+    <!--        <item>@mipmap/icon_color17</item>-->
+    <!--        <item>@mipmap/icon_color18</item>-->
+    <!--        <item>@mipmap/icon_color19</item>-->
+    <!--        <item>@mipmap/icon_color20</item>-->
+    <!--        <item>@mipmap/icon_color21</item>-->
+    <!--        <item>@mipmap/icon_color22</item>-->
+    <!--        <item>@mipmap/icon_color23</item>-->
+    <!--        <item>@mipmap/icon_color24</item>-->
+    <!--        <item>@mipmap/icon_color25</item>-->
+    <!--    </integer-array>-->
+
+    <!--    <integer-array name="chat_type_drawable_ids">-->
+    <!--        <item>@mipmap/icon_dot1</item>-->
+    <!--        <item>@mipmap/icon_dot2</item>-->
+    <!--        <item>@mipmap/icon_dot3</item>-->
+    <!--        <item>@mipmap/icon_dot4</item>-->
+    <!--        <item>@mipmap/icon_dot5</item>-->
+    <!--        <item>@mipmap/icon_dot6</item>-->
+    <!--        <item>@mipmap/icon_dot7</item>-->
+    <!--        <item>@mipmap/icon_dot8</item>-->
+    <!--        <item>@mipmap/icon_dot9</item>-->
+    <!--        <item>@mipmap/icon_dot10</item>-->
+    <!--        <item>@mipmap/icon_dot11</item>-->
+    <!--        <item>@mipmap/icon_dot12</item>-->
+    <!--        <item>@mipmap/icon_dot13</item>-->
+    <!--        <item>@mipmap/icon_dot14</item>-->
+    <!--        <item>@mipmap/icon_dot15</item>-->
+    <!--        <item>@mipmap/icon_dot16</item>-->
+    <!--        <item>@mipmap/icon_dot17</item>-->
+    <!--        <item>@mipmap/icon_dot18</item>-->
+    <!--        <item>@mipmap/icon_dot19</item>-->
+    <!--        <item>@mipmap/icon_dot20</item>-->
+    <!--        <item>@mipmap/icon_dot21</item>-->
+    <!--        <item>@mipmap/icon_dot22</item>-->
+    <!--        <item>@mipmap/icon_dot23</item>-->
+    <!--        <item>@mipmap/icon_dot24</item>-->
+    <!--        <item>@mipmap/icon_dot25</item>-->
+
+    <!--    </integer-array>-->
+
+    <declare-styleable name="FabWithLabelView">
+        <attr name="android:src" />
+        <attr name="srcCompat" />
+        <attr name="fabLabel" format="string" />
+        <attr name="fabBackgroundColor" format="color" />
+        <attr name="fabLabelColor" format="color" />
+        <attr name="fabLabelBackgroundColor" format="color" />
+        <attr name="fabLabelClickable" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="SpeedDialView">
+        <attr name="sdExpansionMode" format="enum">
+            <enum name="top" value="0" />
+            <enum name="bottom" value="1" />
+            <enum name="left" value="2" />
+            <enum name="right" value="3" />
+        </attr>
+        <attr name="sdMainFabAnimationRotateAngle" format="float" />
+        <attr name="sdMainFabClosedSrc" format="reference" />
+        <attr name="sdMainFabClosedBackgroundColor" format="color" />
+        <attr name="sdMainFabOpenedSrc" format="reference" />
+        <attr name="sdMainFabOpenedBackgroundColor" format="color" />
+        <attr name="sdOverlayLayout" format="reference" />
+        <attr name="sdUseReverseAnimationOnClose" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="SpeedDialOverlayLayout">
+        <attr name="clickable_overlay" format="boolean" />
+        <attr name="android:background" />
+    </declare-styleable>
+</resources>
