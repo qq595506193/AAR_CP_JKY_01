@@ -122,6 +122,7 @@
         <attr name="input_bg" format="color" />
         <attr name="input_bg_white" format="color" />
         <attr name="chat_bottom_voice" format="reference" />
+        <attr name="chat_bottom_more" format="reference" />
         <attr name="chat_bottom_send" format="reference" />
         <attr name="uninputColor" format="color" />
         <attr name="input_line_bg" format="color" />

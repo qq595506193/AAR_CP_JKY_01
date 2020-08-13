@@ -1,6 +1,8 @@
 package com.example.aar_cp_jky_01.adapter;
 
+import android.app.Activity;
 import android.content.Context;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,9 +15,11 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.aar_cp_jky_01.R;
+import com.example.aar_cp_jky_01.bean.CheckMoreBean;
 import com.example.aar_cp_jky_01.bean.IssueContentBean;
 import com.example.aar_cp_jky_01.bean.MessageBean;
 import com.example.aar_cp_jky_01.chat_view.ChatActivity;
+import com.example.aar_cp_jky_01.utils.SharePreUtils;
 import com.example.aar_cp_jky_01.utils.SpeechUtils;
 
 import java.util.ArrayList;
@@ -26,16 +30,20 @@ public class ChatAdapter extends BaseAdapter {
     private Context context;
     private List<MessageBean> lists;
     private SpeechUtils mSpeechUtils;
+    private boolean isOpenSound = false;
+    boolean isReceive = false;
 
     public ChatAdapter(Context context) {
         super();
         this.context = context;
         lists = new ArrayList<>();
+        isOpenSound = SharePreUtils.getSoundsBoolean(context);
 //        mSpeechUtils = new SpeechUtils((Activity) context);
     }
 
     public void setMessage(MessageBean message) {
         if (message != null) {
+            isReceive = true;
             lists.add(message);
         }
         notifyDataSetChanged();
@@ -45,7 +53,7 @@ public class ChatAdapter extends BaseAdapter {
      * 停止语音
      */
     public void stopRecoard() {
-        mSpeechUtils.stopPeed();
+//        mSpeechUtils.stopPeed();
     }
 
     /**
@@ -113,6 +121,7 @@ public class ChatAdapter extends BaseAdapter {
                 holderView.tv_chat_message.setText(messageBean.getCotent_text());
                 break;
             case ChatActivity.BTN:
+                holderView.tv_chat_message.setText(messageBean.getCotent_text());
                 View btnGroup = convertView.inflate(context, R.layout.layout_item_btn_single, null);
                 holderView.ll_group.addView(btnGroup);
                 RecyclerView rv_button = btnGroup.findViewById(R.id.rv_button);
@@ -129,6 +138,31 @@ public class ChatAdapter extends BaseAdapter {
                 RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
                 convertView.setLayoutParams(layoutParams);
                 break;
+            case ChatActivity.CHECK_MORE:
+                holderView.tv_chat_message.setText(messageBean.getCotent_text());
+                setDiseaseMessage.setDiseaseMessageListener(messageBean.getCheckMoreBeans());
+                break;
+        }
+        String content;
+        if (!messageBean.isHistory()) {
+            if (isReceive && isOpenSound && IMsgViewType.IMVT_COM_MSG != 1) {
+                try {
+                    content = messageBean.getCotent_text();
+                } catch (Exception e) {
+                    content = "";
+                }
+                String text;
+                if ("".equals(content)) {
+                    text = holderView.tv_chat_message.getText().toString();
+                } else {
+                    text = content;
+                }
+                if (!TextUtils.isEmpty(text) && !messageBean.isOffLine()) {
+                    //  读出问题内容
+//                    mSpeechUtils.startPeed(text, null);
+                }
+            }
+            isReceive = false;
         }
         return convertView;
     }
@@ -156,12 +190,23 @@ public class ChatAdapter extends BaseAdapter {
 
     private SetSureOrCancle setSureOrCancle;
 
-    // 评跳转回调
+    // 评跳转回调接口
     public interface SetSureOrCancle {
         void setSureOrCancleListener(String btn_text, boolean isShow);
     }
 
     public void setSetSureOrCancle(SetSureOrCancle setSureOrCancle) {
         this.setSureOrCancle = setSureOrCancle;
+    }
+
+    private SetDiseaseMessage setDiseaseMessage;
+
+    // 选择病症横向列表回调接口
+    public interface SetDiseaseMessage {
+        void setDiseaseMessageListener(List<CheckMoreBean> checkMoreBeans);
+    }
+
+    public void setSetDiseaseMessage(SetDiseaseMessage setDiseaseMessage) {
+        this.setDiseaseMessage = setDiseaseMessage;
     }
 }

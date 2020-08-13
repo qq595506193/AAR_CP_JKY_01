@@ -57,4 +57,7 @@ dependencies {
     //recyclerview
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
 
+    //Android开发万能Utils（工具大全）
+    implementation 'com.blankj:utilcode:1.23.4'
+
 }

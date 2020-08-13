@@ -9,8 +9,27 @@ public class MessageBean implements Serializable {
 
     private int send_type;
 
-
     private boolean isSystemMessage = false;
+
+    private boolean isHistory = false;
+
+    private boolean isOffLine = false;
+
+    public boolean isHistory() {
+        return isHistory;
+    }
+
+    public void setHistory(boolean history) {
+        isHistory = history;
+    }
+
+    public boolean isOffLine() {
+        return isOffLine;
+    }
+
+    public void setOffLine(boolean offLine) {
+        isOffLine = offLine;
+    }
 
     public boolean isSystemMessage() {
         return isSystemMessage;
@@ -45,6 +64,16 @@ public class MessageBean implements Serializable {
     private String cotent_text;
 
     private List<IssueContentBean.BtnsBean> btns;
+
+    private List<CheckMoreBean> checkMoreBeans;
+
+    public List<CheckMoreBean> getCheckMoreBeans() {
+        return checkMoreBeans;
+    }
+
+    public void setCheckMoreBeans(List<CheckMoreBean> checkMoreBeans) {
+        this.checkMoreBeans = checkMoreBeans;
+    }
 
     public List<IssueContentBean.BtnsBean> getBtns() {
         return btns;

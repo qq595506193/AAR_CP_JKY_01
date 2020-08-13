@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:id="@+id/cl_base"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:context=".chat_view.ChatActivity">
@@ -15,11 +16,14 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ListView
-        android:id="@+id/lv_chat"
+    <library.PullToRefreshListView
+        android:id="@+id/prlv_listview"
         android:layout_width="@dimen/dp_0"
         android:layout_height="@dimen/dp_0"
-        app:layout_constraintBottom_toTopOf="@id/include_bottom"
+        android:divider="@null"
+        android:gravity="center_vertical"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toTopOf="@id/ll_more"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/include_title" />
@@ -33,7 +37,7 @@
         app:layout_constraintBottom_toTopOf="@id/rv_menu"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/lv_chat" />
+        app:layout_constraintTop_toBottomOf="@id/prlv_listview" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_menu"
@@ -55,7 +59,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/lv_chat" />
+        app:layout_constraintTop_toBottomOf="@id/prlv_listview" />
 
     <LinearLayout
         android:id="@+id/ll_btn"

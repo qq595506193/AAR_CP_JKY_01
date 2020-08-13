@@ -8,7 +8,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cl_more"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="?titleTextColor">
 
         <ImageView
             android:id="@+id/iv_speek"
@@ -25,7 +26,8 @@
             android:layout_width="@dimen/dp_25"
             android:layout_height="@dimen/dp_25"
             android:layout_marginLeft="@dimen/dp_15"
-            android:background="@mipmap/ic_launcher"
+            android:background="?chat_bottom_more"
+            android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toRightOf="@id/iv_speek"
             app:layout_constraintTop_toTopOf="parent" />
@@ -33,9 +35,22 @@
         <EditText
             android:id="@+id/et_input"
             android:layout_width="@dimen/dp_0"
-            android:layout_height="@dimen/dp_40"
-            android:layout_marginLeft="@dimen/dp_10"
-            android:layout_marginRight="@dimen/dp_10"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_5"
+            android:layout_marginRight="@dimen/dp_15"
+            android:layout_marginBottom="@dimen/dp_5"
+            android:background="@drawable/bg_edittext"
+            android:gravity="center_vertical"
+            android:hint="请输入您的问题..."
+            android:imeOptions="actionDone"
+            android:maxLines="5"
+            android:minHeight="@dimen/dp_35"
+            android:paddingLeft="@dimen/dp_5"
+            android:textColor="?inputColor"
+            android:textColorHint="?uninputColor"
+            android:textCursorDrawable="@drawable/bg_text_cursor"
+            android:textSize="@dimen/sp_14"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toRightOf="@id/tv_more"
             app:layout_constraintRight_toLeftOf="@id/tv_send"
@@ -46,7 +61,7 @@
             android:layout_width="@dimen/dp_25"
             android:layout_height="@dimen/dp_25"
             android:layout_marginRight="@dimen/dp_10"
-            android:background="@mipmap/ic_launcher"
+            android:background="?chat_bottom_send"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

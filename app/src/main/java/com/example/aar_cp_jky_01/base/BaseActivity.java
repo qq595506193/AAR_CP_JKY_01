@@ -54,7 +54,7 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
         setTheme(Comm.ThemeId);
         setContentView(bindLayout());
         //为 Activity 指定 windowSoftInputMode
-        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
+//        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
         unbinder = ButterKnife.bind(this);
         initView(getIntent());
         initData();
